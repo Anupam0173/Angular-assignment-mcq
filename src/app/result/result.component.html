@@ -1,0 +1,15 @@
+
+<div class="jumbotron m-5" >
+    <h1 class="display-4">you have scored : {{marks}} Marks out of 
+      {{totalquestions}}</h1>
+    
+    <hr class="my-4">
+    <p><span class="text-success">Correct Answers : {{marks}}</span>&nbsp;&nbsp;
+      <span class="text-danger">Wrong Answers : {{wrong_ans}}</span>
+      </p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg"  routerLink="/" >finish</a>
+    </p>
+    
+   <router-outlet></router-outlet>
+  </div>

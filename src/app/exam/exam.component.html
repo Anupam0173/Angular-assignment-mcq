@@ -1,0 +1,42 @@
+
+<div class="container font-weight-bold text-primary">
+    <div class="row mt-3">
+
+      <div class="col-sm">
+        Exam Name
+      </div>
+
+      <div class="col-sm">
+        No of Questins
+      </div>
+
+      <div class="col-sm">
+        Action
+      </div>
+
+    </div>
+</div>
+<div class="container" *ngFor="let test of testsList; let i = index">
+    <div class="row mt-3">
+
+      <div class="col-sm">
+        {{ test.name }}
+      </div>
+
+      <div class="col-sm">
+        {{ test.questions.length }}
+      </div>
+
+      <div class="col-sm">
+        <button type="button" class="btn btn-primary">
+            <a class="text-white" style="text-decoration: none;" routerLink="{{ test.name }}" (click)="onStart(i)">{{ test.name }}</a>
+    </button>
+      </div>
+
+    </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
+
